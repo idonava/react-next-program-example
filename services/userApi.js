@@ -23,7 +23,7 @@ export const createUser = async (state) => {
 
 export const getCurrentUser = async (token) => {
     try {
-        const res = await post("/routing/getuser", '{"token":"2CcbSLtUZkNcVWd6a/GNUQ=="}')
+        const res = await post("/routing/getuser", JSON.stringify(token))
         console.log('res',res);
 
         return res;
